@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Sve AI tajne — PMI Forum 2026</title>
+<meta name="description" content="Materijali, upute i registracija alata za polaznike radionice.">
+<style>
+  :root{
+    --ink:#0B1220; --muted:#5B6478; --line:#E3E7EF; --soft:#F6F7FA;
+    --orange:#FF6B1A; --orange-t:#FFF1E7; --orange-b:#FFD3B8;
+    --navy:#1E2840; --light:#AEB8CE;
+    --green:#15803D; --green-t:#EAF7EF; --green-b:#BFE3CC;
+    --red:#C62828; --red-t:#FDEEEE; --red-b:#F5B5B5;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+  body{
+    margin:0; background:#fff; color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    line-height:1.55; font-size:16px;
+  }
+  .wrap{max-width:960px; margin:0 auto; padding:0 16px}
+
+  /* ---------- hero ---------- */
+  header{background:var(--ink); color:#fff; position:relative; overflow:hidden}
+  header::before{
+    content:""; position:absolute; width:520px; height:520px; border-radius:50%;
+    background:radial-gradient(circle,rgba(255,107,26,.45) 0%,rgba(255,107,26,0) 68%);
+    top:-220px; right:-160px; pointer-events:none;
+  }
+  header::after{
+    content:""; position:absolute; width:440px; height:440px; border-radius:50%;
+    background:radial-gradient(circle,rgba(60,110,255,.32) 0%,rgba(60,110,255,0) 70%);
+    bottom:-240px; left:-140px; pointer-events:none;
+  }
+  .hero{position:relative; z-index:1; padding:44px 0 40px}
+  .chip{
+    display:inline-block; background:var(--orange); color:#fff; font-size:11px;
+    font-weight:700; letter-spacing:1.4px; padding:6px 13px; border-radius:999px;
+  }
+  h1{font-size:clamp(28px,6vw,42px); line-height:1.12; margin:18px 0 0; letter-spacing:-.5px}
+  .tag{color:var(--orange); font-weight:700; font-size:clamp(15px,3.4vw,18px); margin:12px 0 0}
+  .meta{color:var(--light); font-size:14px; margin:22px 0 0; display:flex; flex-wrap:wrap; gap:6px 18px}
+  .meta span{white-space:nowrap}
+
+  /* ---------- sections ---------- */
+  section{padding:38px 0 6px}
+  section.alt{background:var(--soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+  .eyebrow{color:var(--orange); font-size:11px; font-weight:700; letter-spacing:1.6px; margin:0}
+  h2{font-size:clamp(20px,4.4vw,26px); margin:7px 0 6px}
+  .lead{color:var(--muted); margin:0 0 22px; max-width:62ch}
+
+  /* ---------- cards ---------- */
+  .grid{display:grid; gap:14px; grid-template-columns:1fr}
+  @media(min-width:680px){ .grid.two{grid-template-columns:1fr 1fr} }
+  .card{
+    display:block; background:#fff; border:1px solid var(--line); border-radius:12px;
+    padding:18px 18px 16px; text-decoration:none; color:inherit;
+    box-shadow:0 1px 2px rgba(27,36,64,.05); transition:border-color .15s, box-shadow .15s, transform .15s;
+  }
+  a.card:hover{border-color:var(--orange-b); box-shadow:0 6px 18px rgba(27,36,64,.09); transform:translateY(-1px)}
+  .card .ico{
+    width:38px; height:38px; border-radius:50%; background:var(--orange-t);
+    display:flex; align-items:center; justify-content:center; margin-bottom:12px;
+  }
+  .card .ico svg{width:19px; height:19px; stroke:var(--orange); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round}
+  .card h3{margin:0 0 5px; font-size:16.5px}
+  .card p{margin:0; color:var(--muted); font-size:14px}
+  .card .go{display:inline-block; margin-top:11px; color:var(--orange); font-weight:700; font-size:14px}
+  .card.hi{background:var(--orange-t); border-color:var(--orange-b)}
+  .card.hi .ico{background:#fff}
+  .badge{
+    display:inline-block; font-size:10.5px; font-weight:700; letter-spacing:.9px;
+    padding:3px 9px; border-radius:999px; margin-bottom:10px;
+  }
+  .badge.now{background:var(--orange); color:#fff}
+  .badge.pdf{background:var(--ink); color:#fff}
+
+  /* ---------- alati ---------- */
+  .tool{
+    background:#fff; border:1px solid var(--line); border-radius:12px;
+    padding:18px 18px 16px; margin-bottom:14px; box-shadow:0 1px 2px rgba(27,36,64,.05);
+  }
+  .tool-h{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:3px}
+  .tool-h h3{margin:0; font-size:18px}
+  .tool-h .what{color:var(--muted); font-size:13.5px}
+  .tool > p.use{margin:0 0 12px; color:var(--muted); font-size:14px}
+  .tool ol{margin:0 0 12px; padding-left:0; list-style:none; counter-reset:t}
+  .tool ol li{
+    counter-increment:t; position:relative; padding:0 0 9px 30px; font-size:14.5px;
+  }
+  .tool ol li::before{
+    content:counter(t); position:absolute; left:0; top:1px; width:20px; height:20px;
+    border-radius:50%; background:var(--ink); color:#fff; font-size:11px; font-weight:700;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .tool ol li:last-child{padding-bottom:0}
+  .btn{
+    display:inline-block; background:var(--orange); color:#fff; text-decoration:none;
+    font-weight:700; font-size:14px; padding:9px 16px; border-radius:8px; margin-top:4px;
+    transition:background .15s;
+  }
+  .btn:hover{background:#E85D10}
+  .btn.ghost{background:#fff; color:var(--ink); border:1px solid var(--line)}
+  .btn.ghost:hover{background:var(--soft)}
+  .tip{
+    background:var(--orange-t); border:1px solid var(--orange-b); border-radius:9px;
+    padding:10px 13px; margin:0 0 12px; font-size:13.8px;
+  }
+  .tip.warn{background:var(--red-t); border-color:var(--red-b)}
+  .tip.warn b{color:var(--red)}
+  .tip.ok{background:var(--green-t); border-color:var(--green-b)}
+  .tip.ok b{color:var(--green)}
+
+  /* ---------- agenda ---------- */
+  .agenda{border:1px solid var(--line); border-radius:12px; overflow:hidden; background:#fff}
+  .row{display:flex; gap:14px; padding:13px 16px; border-bottom:1px solid var(--line); align-items:baseline}
+  .row:last-child{border-bottom:0}
+  .row .t{flex:0 0 96px; color:var(--orange); font-weight:700; font-size:13.5px; font-variant-numeric:tabular-nums}
+  .row .n{margin:0; font-weight:600; font-size:15px}
+  .row .d{margin:2px 0 0; color:var(--muted); font-size:13.5px}
+  .row.brk{background:var(--soft)}
+  .row.brk .n{font-weight:500; color:var(--muted)}
+
+  /* ---------- note ---------- */
+  .note{
+    background:var(--orange-t); border:1px solid var(--orange-b); border-radius:11px;
+    padding:14px 16px; margin:20px 0 0; font-size:14.5px;
+  }
+  .note b{color:var(--ink)}
+  .note.ok{background:var(--green-t); border-color:var(--green-b)}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink); color:var(--light); margin-top:44px; padding:30px 0}
+  footer a{color:var(--orange); font-weight:600; text-decoration:none}
+  footer .fl{display:flex; flex-wrap:wrap; gap:8px 26px; align-items:center; font-size:14px}
+  footer .sm{font-size:12.5px; color:#6C7BA0; margin:16px 0 0; border-top:1px solid #2A3550; padding-top:14px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hero">
+    <span class="chip">PMI FORUM 2026 &nbsp;·&nbsp; RADIONICA</span>
+    <h1>Sve AI tajne<br>za project managere</h1>
+    <p class="tag">Od prompta do agenata i monday.com workflowa</p>
+    <div class="meta">
+      <span>Katarina Zubatović &amp; Dragan Petric</span>
+      <span>9:00 – 16:05</span>
+      <span>Zagreb</span>
+    </div>
+  </div>
+</header>
+
+<!-- ========== PRIJE RADIONICE ========== -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">POČNITE ODAVDE</p>
+    <h2>Alati i materijali</h2>
+
+    <div class="grid two" style="margin-top:22px">
+      <a class="card hi" href="#alati">
+        <span class="badge now">OBAVEZNO</span>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h3>Registracija alata</h3>
+        <p>Šest alata koje koristimo na radionici — korak po korak, s linkovima.</p>
+        <span class="go">Otvori upute →</span>
+      </a>
+
+      <a class="card" href="#materijali">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg></div>
+        <h3>Materijali za preuzimanje</h3>
+        <p>Dva priručnika u PDF-u: monday postav i meta-promptovi za PM-a.</p>
+        <span class="go">Preuzmi →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ALATI ========== -->
+<section class="alt" id="alati">
+  <div class="wrap">
+    <p class="eyebrow">REGISTRACIJA ALATA</p>
+    <h2>Šest alata koje koristimo</h2>
+    <p class="lead">Za radionicu su dovoljni besplatni planovi, osim gdje je drugačije napisano. Svaki link ispod vodi izravno na registraciju.</p>
+
+    <!-- Claude -->
+    <div class="tool">
+      <div class="tool-h"><h3>Claude</h3><span class="what">glavni AI alat radionice</span></div>
+      <p class="use">U njemu radimo promptove, projektnu dokumentaciju i kontekst pakete. Bez njega ne možete pratiti module 2 i 3.</p>
+      <ol>
+        <li>Otvorite <b>claude.ai</b> i kliknite <b>Sign up</b>.</li>
+        <li>Registrirajte se e-mailom (preporučeno poslovnim, na vlastitoj domeni) ili prijavom preko Googlea.</li>
+        <li>Potvrdite e-mail kodom koji vam stigne.</li>
+        <li>Potvrdite broj mobitela SMS-om. <b>Ovaj se korak ne može preskočiti.</b></li>
+        <li>Za Pro plan: inicijal dolje lijevo → <b>Settings</b> → <b>Billing</b> → <b>Upgrade to Pro</b> → podaci kartice.</li>
+        <li>Provjera da je sve u redu: <b>Projects</b> → <b>New project</b> i nazovite ga imenom svoje firme ili projekta.</li>
+      </ol>
+      <div class="tip"><b>Skinite i desktop aplikaciju.</b> Claude radi u pregledniku, ali desktop verzija (macOS i Windows) je ono što koristimo na radionici — brža je, ostaje otvorena sa strane i jedina omogućuje rad s datotekama na vašem računalu i povezivanje alata. Skinete je s <b>claude.ai/download</b> i prijavite se istim računom.</div>
+      <div class="tip ok"><b>Koji plan:</b> Free je dovoljan da pratite, ali se brzo potroši. Pro otključava dulji rad bez prekida i rad na projektima — to je plan koji preporučujemo ako AI planirate koristiti svaki dan.</div>
+      <a class="btn" href="https://claude.ai/" target="_blank" rel="noopener">Registrirajte Claude →</a>
+    </div>
+
+    <!-- monday -->
+    <div class="tool">
+      <div class="tool-h"><h3>monday.com</h3><span class="what">gdje projekt živi</span></div>
+      <p class="use">Modul 4 radimo uživo u monday-u: boardovi, forma za prijem zahtjeva, pet automatizacija i dashboard za sponzora.</p>
+      <ol>
+        <li>Otvorite link ispod i kliknite <b>Get Started</b>.</li>
+        <li>Poslovni e-mail ili prijava preko Googlea. Kartica nije potrebna.</li>
+        <li>Kad vas pita što želite pratiti, odaberite <b>Projects</b>.</li>
+        <li>Preskočite ponuđene predloške i napravite jedan prazan workspace — na radionici ga punimo vašim projektom.</li>
+      </ol>
+      <div class="tip"><b>Uzmite trial, ne Free plan.</b> Trial traje 14 dana i ne traži karticu, ali otključava automatizacije i dashboard — a to je upravo ono što radimo u modulu 4. Na Free planu ta dva koraka ne možete odraditi.</div>
+      <a class="btn" href="https://monday.com/ap/agents-for-work?utm_campaign=partnerstack&amp;utm_medium=1753&amp;utm_source=partner&amp;pscd=try.monday.com&amp;ps_partner_key=MTc1Mw&amp;ps_xid=0dWh6fpmFtBer1&amp;gsxid=0dWh6fpmFtBer1&amp;gspk=MTc1Mw" target="_blank" rel="noopener">Otvorite besplatni monday trial →</a>
+    </div>
+
+    <!-- Zenzap -->
+    <div class="tool">
+      <div class="tool-h"><h3>Zenzap</h3><span class="what">timski chat s AI agentima</span></div>
+      <p class="use">Chat za projektni tim u kojem AI agenti sjede u razgovoru: zapisničar sa sastanka, tjedni status za sponzora, podsjetnici na rokove.</p>
+      <ol>
+        <li>Otvorite link ispod i registrirajte se e-mailom.</li>
+        <li>Napravite workspace za svoju firmu ili projekt.</li>
+        <li>Otvorite prvi <b>topic</b> — tako se u Zenzapu zovu kanali. Nazovite ga imenom projekta.</li>
+        <li>Mobilnu aplikaciju instalirajte tek nakon što ste račun otvorili na računalu.</li>
+      </ol>
+      <div class="tip"><b>Agente ne postavljajte unaprijed.</b> Postavljamo ih zajedno na radionici — AI agent koji se krivo postavi javlja se cijelom timu, a to je teže popraviti nego postaviti.</div>
+      <a class="btn" href="https://www.zenzap.co/?GL15DFK4W-PB24YELJFP14ZKVB" target="_blank" rel="noopener">Registrirajte Zenzap →</a>
+    </div>
+
+    <!-- Gamma -->
+    <div class="tool">
+      <div class="tool-h"><h3>Gamma</h3><span class="what">prezentacije i dokumenti</span></div>
+      <p class="use">Iz prompta ili dokumenta napravi prezentaciju. Koristimo ga za statusne prezentacije sponzoru i materijale za kick-off.</p>
+      <ol>
+        <li>Otvorite link ispod.</li>
+        <li>Registrirajte se e-mailom ili preko Googlea.</li>
+        <li>Potvrdite e-mail. Kartica nije potrebna za Free plan.</li>
+        <li>Napravite jednu probnu prezentaciju iz prompta da vidite kako radi.</li>
+      </ol>
+      <div class="tip ok"><b>Free plan je dovoljan za radionicu</b> — do 10 slajdova po promptu i izvoz u PDF, PPTX i Google Slides.</div>
+      <a class="btn" href="https://try.gamma.app/khm062f8gf3f" target="_blank" rel="noopener">Registrirajte Gamma →</a>
+    </div>
+
+    <!-- ElevenLabs -->
+    <div class="tool">
+      <div class="tool-h"><h3>ElevenLabs</h3><span class="what">AI glas i voiceover</span></div>
+      <p class="use">AI glas, uključujući hrvatski. Za video upute timu, interne najave i snimke uz prezentacije.</p>
+      <ol>
+        <li>Otvorite link ispod.</li>
+        <li>Registrirajte se e-mailom ili preko Googlea i potvrdite e-mail.</li>
+        <li>Kartica nije potrebna za Free plan.</li>
+      </ol>
+      <div class="tip warn"><b>Ako nešto objavljujete van firme:</b> Free plan nema komercijalnu licencu. Za materijale koji idu klijentu ili na javni kanal treba barem Starter plan.</div>
+      <a class="btn" href="https://try.elevenlabs.io/lt9n4nea8y5s" target="_blank" rel="noopener">Registrirajte ElevenLabs →</a>
+    </div>
+
+    <!-- Descript -->
+    <div class="tool">
+      <div class="tool-h"><h3>Descript</h3><span class="what">montaža videa i audija tekstom</span></div>
+      <p class="use">Video se montira brisanjem riječi u transkriptu. Najbrži put od snimljenog sastanka ili edukacije do kratkih isječaka.</p>
+      <ol>
+        <li>Otvorite link ispod.</li>
+        <li>Registrirajte se e-mailom ili preko Googlea. Kartica nije potrebna za Free.</li>
+        <li>Radi u pregledniku, ali skinite i desktop aplikaciju (macOS/Windows) — osjetno je brža za montažu.</li>
+      </ol>
+      <div class="tip"><b>Free plan ostavlja watermark</b> i ograničen je na 720p. Za snimke koje idu dalje od vašeg ekrana treba plaćeni plan.</div>
+      <a class="btn" href="https://descript.cello.so/J2XK0L1C5TZ" target="_blank" rel="noopener">Registrirajte Descript →</a>
+    </div>
+
+    <div class="note">
+      <b>Ako nešto zapne,</b> javite se na <a href="mailto:info@gothrive.hr" style="color:var(--orange);font-weight:700;text-decoration:none">info@gothrive.hr</a> i riješit ćemo zajedno.
+    </div>
+  </div>
+</section>
+
+<!-- ========== PLAN DANA ========== -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">PLAN DANA</p>
+    <h2>Pet modula</h2>
+    <p class="lead">Praktični rad je u modulima 2 i 4 — tada vam treba laptop.</p>
+
+    <div class="agenda">
+      <div class="row">
+        <div class="t">9:00 – 9:50</div>
+        <div><p class="n">Što se promijenilo u AI-ju</p><p class="d">Od chata do agenta · Dragan Petric</p></div>
+      </div>
+      <div class="row">
+        <div class="t">9:50 – 10:50</div>
+        <div><p class="n">Prompt i kontekst za projektnu dokumentaciju</p><p class="d">Charter, WBS, RACI, registar rizika · Katarina Zubatović</p></div>
+      </div>
+      <div class="row brk"><div class="t">10:50</div><div><p class="n">Pauza</p></div></div>
+      <div class="row">
+        <div class="t">11:05 – 12:30</div>
+        <div><p class="n">AI kroz životni ciklus projekta</p><p class="d">Od pokretanja do lessons learned · oboje</p></div>
+      </div>
+      <div class="row brk"><div class="t">12:30</div><div><p class="n">Ručak</p></div></div>
+      <div class="row">
+        <div class="t">13:30 – 15:15</div>
+        <div><p class="n">monday.com workflowi</p><p class="d">Pet automatizacija i AI blokovi · Katarina Zubatović</p></div>
+      </div>
+      <div class="row brk"><div class="t">15:15</div><div><p class="n">Pauza</p></div></div>
+      <div class="row">
+        <div class="t">15:30 – 16:05</div>
+        <div><p class="n">Pravila, rizici i uloga PM-a</p><p class="d">Što ne ide u AI, EU AI Act · Dragan Petric</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MATERIJALI ========== -->
+<section class="alt" id="materijali">
+  <div class="wrap">
+    <p class="eyebrow">MATERIJALI</p>
+    <h2>Preuzmite priručnike</h2>
+    <p class="lead">Oba su PDF-a. Preuzmite ih i ostaju vam trajno, i nakon radionice.</p>
+
+    <div class="grid two">
+      <a class="card" href="monday-prirucnik.pdf" download>
+        <span class="badge pdf">PDF · 27 STRANICA</span>
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+        <h3>monday.com za project managere</h3>
+        <p>Od praznog računa do pet workflowa: boardovi, forma, automatizacije, AI blokovi i dashboard — sa snimkama ekrana svakog koraka.</p>
+        <span class="go">Preuzmi PDF →</span>
+      </a>
+
+      <a class="card" href="meta-promptovi-za-pm.pdf" download>
+        <span class="badge pdf">PDF · 19 STRANICA</span>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+        <h3>Meta-promptovi za project managera</h3>
+        <p>Devetnaest predložaka koje popunite svojim projektom: kontekst paket, charter, WBS, RACI, rizici, status, eskalacija, lessons learned.</p>
+        <span class="go">Preuzmi PDF →</span>
+      </a>
+    </div>
+
+    <div class="note">
+      <b>Kako ih koristiti zajedno:</b> meta-promptovi daju sadržaj — registar rizika, zadatke, statuse. monday priručnik pokazuje gdje taj sadržaj živi i što se s njim automatizira. Kolone u oba dokumenta su namjerno iste, pa se tablice kopiraju bez prepravljanja.
+    </div>
+  </div>
+</section>
+
+<!-- ========== POSLIJE ========== -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">POSLIJE RADIONICE</p>
+    <h2>Prvih sedam dana</h2>
+    <p class="lead">Jedna stvar dnevno. Nemojte pokušati sve odjednom — tako se najbrže odustane.</p>
+
+    <div class="agenda">
+      <div class="row"><div class="t">Dan 1 – 2</div><div><p class="n">Otvorite projekt i unesite kontekst paket</p><p class="d">Ništa drugo.</p></div></div>
+      <div class="row"><div class="t">Dan 3</div><div><p class="n">Napišite prvi status kroz AI</p><p class="d">Usporedite s onim kako ga inače pišete.</p></div></div>
+      <div class="row"><div class="t">Dan 4</div><div><p class="n">Prvi sastanak kroz transkript</p><p class="d">Do akcijskih točaka s vlasnikom i rokom.</p></div></div>
+      <div class="row"><div class="t">Dan 5</div><div><p class="n">Uključite jedan workflow</p><p class="d">Onaj koji ste složili na radionici.</p></div></div>
+      <div class="row"><div class="t">Dan 6 – 7</div><div><p class="n">Pokažite timu jednu stvar</p><p class="d">Onu koja vam je uštedjela vrijeme.</p></div></div>
+    </div>
+
+    <div class="note ok">
+      <b>Mjerite jednu stvar:</b> koliko ste sati ovaj tjedan proveli pišući umjesto vodeći. Za mjesec dana usporedite.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fl">
+      <span><b style="color:#fff">Sve AI tajne</b> — GoThrive</span>
+      <a href="mailto:info@gothrive.hr">info@gothrive.hr</a>
+      <a href="https://gothrive.hr">gothrive.hr</a>
+    </div>
+    <p class="sm">Stranica je namijenjena polaznicima radionice na PMI Forumu 2026. Nije indeksirana i ne dijeli se javno. Neki linkovi za registraciju su partnerski.</p>
+  </div>
+</footer>
+
+</body>
+</html>
